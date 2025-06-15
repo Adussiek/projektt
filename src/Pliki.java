@@ -6,6 +6,7 @@ import java.util.List;
 
 
 public class Pliki {
+    //metoda odczytujaca z pliku
     public static Quiz odczyt(String plik){
         String tekst,nazwa,nazwaP;
         boolean pCzyf;
@@ -42,7 +43,7 @@ public class Pliki {
         }
         return null;
     }
-
+// metoda zapisujaca do pliku
     public static void zapis(String plik,Quiz quiz){
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(plik));

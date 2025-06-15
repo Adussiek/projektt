@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Tworzenie {
-
+    //metoda tworzaca quiz
     public static Quiz stworz (int ilosc,String nazwa){
         Scanner scanner = new Scanner(System.in);
 
@@ -32,7 +32,7 @@ public class Tworzenie {
                 listaO.add(new Odpowiedz(nazwaO,pCzyf));
 
             }
-            listaP.add(new Pytanie(nazwa,new ArrayList<>(listaO)));
+            listaP.add(new Pytanie(nazwaP,new ArrayList<>(listaO)));
             listaO.clear();
 
 

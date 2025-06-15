@@ -25,7 +25,7 @@ public class Quiz {
     public void setNazwa(String nazwa) {
         this.nazwa = nazwa;
     }
-
+    //metoda do zmiany tresci pytania o podanym indeksie
     public void zmienPytanie(int i,String nazwa){
         Pytanie pytanie=(Pytanie) pytania.get(i);
         pytanie.setPytanie(nazwa);

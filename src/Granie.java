@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Granie {
+    //Metoda do grania w quiz i zliczania zdobytych punktów
     public static void graj(Quiz quiz){
         System.out.println(quiz.getNazwa());
         Scanner scanner = new Scanner(System.in);

@@ -5,6 +5,7 @@ public class System {
     public static void main(String[] args) {
         Scanner sc = new Scanner(java.lang.System.in);
         ListaQuizow lista = new ListaQuizow();
+        //pierwszy quiz
         Quiz quiz = Pliki.odczyt("pamiec.txt");
         lista.dodaj(quiz);
         String nazwa;

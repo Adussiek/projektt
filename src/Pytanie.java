@@ -4,14 +4,10 @@ import java.util.Arrays;
 
 public class Pytanie {
     private String pytanie;
-    private ArrayList odpowiedzi=new ArrayList<Odpowiedz>();
-    Pytanie(String pytanie, Odpowiedz... odpowiedzi){
-        this.pytanie=pytanie;
-        for (Odpowiedz i : odpowiedzi){
-            this.odpowiedzi.add(i);
+    private ArrayList odpowiedzi = new ArrayList<Odpowiedz>();
 
-        }
-    }
+
+
     Pytanie(String pytanie, ArrayList<Odpowiedz> odpowiedzi){
 
         this.pytanie=pytanie;
@@ -35,7 +31,7 @@ public class Pytanie {
     public String getPytanie() {
         return pytanie;
     }
-
+//metoda tostring wyswietlajaca tresc pytania z wyliczeniem odp od a - z
     @Override
     public String toString() {
         char znak=65;
@@ -46,6 +42,7 @@ public class Pytanie {
         }
         return wynik;
     }
+    //metoda zwracajaca indeks dobrej odpowiedzi
     public int getDobraOdp (){
         for (int i = 0;i<odpowiedzi.size();i++){
             Odpowiedz odpowiedz = (Odpowiedz) odpowiedzi.get(i);
@@ -53,6 +50,7 @@ public class Pytanie {
         }
         return -1;
     }
+    //metoda zmieniajaca poprawną odpowiedz
     public void zmienDobraOdp(int i){
         Odpowiedz odpowiedz = (Odpowiedz) odpowiedzi.get(i);
         Odpowiedz odpowiedz1 = (Odpowiedz) odpowiedzi.get(getDobraOdp());

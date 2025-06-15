@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Modyfikacje {
+    //Metoda do modyfikacji quiz'u
     public static void modyfikuj(Quiz quiz){
         System.out.println(quiz.getNazwa());
         System.out.println("Czy chcesz zmienić nazwę Quizu??? (T/N)");
