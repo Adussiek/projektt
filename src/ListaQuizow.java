@@ -31,4 +31,7 @@ public class ListaQuizow {
     public Quiz get (int i){
         return (Quiz) lista.get(i);
     }
+    public void usun(int i){
+        lista.remove(i);
+    }
 }

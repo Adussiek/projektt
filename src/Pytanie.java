@@ -53,4 +53,10 @@ public class Pytanie {
         }
         return -1;
     }
+    public void zmienDobraOdp(int i){
+        Odpowiedz odpowiedz = (Odpowiedz) odpowiedzi.get(i);
+        Odpowiedz odpowiedz1 = (Odpowiedz) odpowiedzi.get(getDobraOdp());
+        odpowiedz1.setCzyPrawda(false);
+        odpowiedz.setCzyPrawda(true);
+    }
 }

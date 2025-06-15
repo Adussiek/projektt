@@ -8,8 +8,8 @@ public class Tworzenie {
         Scanner scanner = new Scanner(System.in);
 
         int iloscO;
-        Odpowiedz odpowiedz = new Odpowiedz("",false);
-        Pytanie pytanie = new Pytanie("",odpowiedz);
+        boolean pCzyf;
+        String nazwaP,nazwaO;
         ArrayList listaO = new ArrayList<Odpowiedz>();
         ArrayList listaP = new ArrayList<Pytanie>();
         String tekst;
@@ -17,24 +17,23 @@ public class Tworzenie {
             System.out.println("Podaj treść pytania :");
             scanner.nextLine();
             tekst=scanner.nextLine();
-            pytanie.setPytanie(tekst);
+            nazwaP=tekst;
             System.out.println("Podaj ile ma być odpowiedzi ");
             iloscO=scanner.nextInt();
             for (int j = 0; j <iloscO; j++) {
                 System.out.println("Podaj treść odpowiedzi");
                 scanner.nextLine();
                 tekst=scanner.nextLine();
-                odpowiedz.setOdpowiedz(tekst);
+                nazwaO=tekst;
                 System.out.println("Ta odpowiedz jest prawidziwa (T/N)");
                 tekst=scanner.next();
-                if(tekst.equals("T"))odpowiedz.setCzyPrawda(true);
-                else odpowiedz.setCzyPrawda(false);
-                listaO.add(odpowiedz);
+                if(tekst.equals("T"))pCzyf=true;
+                else pCzyf=false;
+                listaO.add(new Odpowiedz(nazwaO,pCzyf));
 
             }
-            pytanie.setOdpowiedzi(listaO);
+            listaP.add(new Pytanie(nazwa,new ArrayList<>(listaO)));
             listaO.clear();
-            listaP.add(pytanie);
 
 
 
