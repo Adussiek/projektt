@@ -2,11 +2,12 @@ import java.util.ArrayList;
 
 public class Quiz {
     private ArrayList pytania = new ArrayList<Pytanie>();
+    private String nazwa;
 
-    Quiz(Pytanie ... pytania){
-        for (Pytanie i : pytania){
-            this.pytania.add(i);
-        }
+    Quiz(ArrayList pytania,String nazwa){
+        this.pytania=pytania;
+        this.nazwa=nazwa;
+
     }
 
     public ArrayList getPytania() {
@@ -15,5 +16,13 @@ public class Quiz {
 
     public void setPytania(ArrayList pytania) {
         this.pytania = pytania;
+    }
+
+    public String getNazwa() {
+        return nazwa;
+    }
+
+    public void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
     }
 }

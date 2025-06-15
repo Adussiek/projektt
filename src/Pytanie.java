@@ -1,4 +1,6 @@
+import java.lang.System;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Pytanie {
     private String pytanie;
@@ -10,9 +12,16 @@ public class Pytanie {
 
         }
     }
+    Pytanie(String pytanie, ArrayList<Odpowiedz> odpowiedzi){
+
+        this.pytanie=pytanie;
+        this.odpowiedzi=odpowiedzi;
+
+    }
 
     public void setOdpowiedzi(ArrayList odpowiedzi) {
         this.odpowiedzi = odpowiedzi;
+
     }
 
     public ArrayList getOdpowiedzi() {
@@ -36,5 +45,12 @@ public class Pytanie {
             znak++;
         }
         return wynik;
+    }
+    public int getDobraOdp (){
+        for (int i = 0;i<odpowiedzi.size();i++){
+            Odpowiedz odpowiedz = (Odpowiedz) odpowiedzi.get(i);
+            if(odpowiedz.getCzyPrawda()) return i;
+        }
+        return -1;
     }
 }
