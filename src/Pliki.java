@@ -57,16 +57,17 @@ public class Pliki {
                 writer.newLine();
                 ArrayList<Odpowiedz>listaO=pytanie.getOdpowiedzi();
                 for (int j=0;j< listaO.size();j++){
-                    Odpowiedz odpowiedz= listaO.get(i);
+                    Odpowiedz odpowiedz= listaO.get(j);
                     writer.write(odpowiedz.getOdpowiedz());
                     if (j!=listaO.size()-1)writer.write(";");
                 }
                 writer.newLine();
                 liczba= pytanie.getDobraOdp();
-                writer.write(liczba+1);
+                liczba++;
+                writer.write(Integer.toString(liczba));
                 if (i!=lista.size()-1) writer.newLine();
-
             }
+            writer.close();
 
         }catch (IOException e){
             System.out.println("Nie udało sie zapisać do pliku!!!");
