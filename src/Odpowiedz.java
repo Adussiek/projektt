@@ -6,7 +6,10 @@ public class Odpowiedz {
         this.czyPrawda=czyPrawda;
 
     }
-
+    Odpowiedz(String odpowiedz){
+        this.odpowiedz=odpowiedz;
+        czyPrawda=false;
+    }
     public String getOdpowiedz() {
         return odpowiedz;
     }

@@ -29,7 +29,7 @@ public class Tworzenie {
                 tekst=scanner.next();
                 if(tekst.equals("T"))pCzyf=true;
                 else pCzyf=false;
-                listaO.add(new Odpowiedz(nazwaO,pCzyf));
+                listaO.add(new Odpowiedz(nazwaO));
 
             }
             listaP.add(new Pytanie(nazwaP,new ArrayList<>(listaO)));
